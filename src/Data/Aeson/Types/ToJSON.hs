@@ -312,8 +312,6 @@ class ToJSON a where
     -- @
 
     toEncoding :: a -> Encoding
-    toEncoding = E.value . toJSON
-    {-# INLINE toEncoding #-}
 
     toJSONList :: [a] -> Value
     toJSONList = listValue toJSON
